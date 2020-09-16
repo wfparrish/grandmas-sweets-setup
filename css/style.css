@@ -2,10 +2,12 @@
 
 :root {
   --mainPink: #ef7998;
+  --mainGreen: #94d653;
   --mainYellow: rgb(249, 228, 148);
   --mainWhite: #fff;
-  --mainBlack: #000;
-  --yellowTrans: rgba(249, 228, 148, 0.5);
+  --mainBlack: #0f1424;
+  --blueTrans: rgba(33, 58, 138, 0.2);
+  --greyShadow: #5e6371;
   --mainGrey: rgb(238, 238, 238);
 }
 
@@ -17,24 +19,23 @@ body {
 /* global styles */
 .btn-pink {
   color: var(--mainPink);
-  border-color: var(--mainPink)!important;
+  border-color: var(--mainPink) !important;
 }
 
 .btn-black {
   color: var(--mainBlack);
-  border-color: var(--mainBlack)!important;
+  border-color: var(--mainBlack) !important;
 }
 
 .btn-black:hover {
   color: var(--mainPink);
-  background: var(--mainBlack)!important;
+  background: var(--mainBlack) !important;
 }
 
 .btn-pink:hover {
   color: var(--mainBlack) !important;
-  background: var(--mainPink)!important;
+  background: var(--mainPink) !important;
 }
-
 
 /* nav links */
 .navbar-toggler {
@@ -43,11 +44,11 @@ body {
 
 .toggler-icon {
   font-size: 2.5rem;
-  color: var(--mainPink)
+  color: var(--mainPink);
 }
 
 .nav-link {
-  color: var(--mainPink);
+  color: var(--greyShadow);
   transition: all 1s ease-in-out;
   font-size: 1.5rem;
 }
@@ -82,10 +83,11 @@ body {
 
 .max-height {
   min-height: calc(100vh - 76px);
-  background: linear-gradient(var(--yellowTrans), var(--yellowTrans)), url(../img/headerBcg.jpeg);
+  background: linear-gradient(var(--blueTrans), var(--blueTrans)),
+    url(../img/rolex.jpeg);
   background-position: center;
   background-size: cover;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -93,22 +95,26 @@ body {
 .banner {
   color: var(--mainWhite);
   margin-top: -4rem;
+  position: relative;
+  top: 72vh;
+  left: -30vw;
+  z-index: 7;
 }
 
 .banner-title {
-  color: var(--mainPink);
+  color: var(--mainGreen);
   font-size: 4rem;
 }
 
 .banner-link {
   font-size: 1.5rem;
-  color: var(--mainBlack);
-  border: 0.2rem solid var(--mainBlack);
+  color: var(--mainWhite);
+  border: 0.2rem solid var(--mainWhite);
 }
 
 .banner-link:hover {
   background: var(--mainBlack);
-  color: var(--mainPink);
+  color: var(--mainGreen);
 }
 
 /* about section */
@@ -117,7 +123,7 @@ body {
 }
 
 .about-img__container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -1.5rem;
   left: -1.7rem;
@@ -148,13 +154,13 @@ body {
 }
 
 .single-item:hover {
-  box-shadow: 0 10px 15px rgb(0,0,0)
+  box-shadow: 0 10px 15px rgb(0, 0, 0);
 }
 
 .img-container {
   position: relative;
   /* keeps the image in the container when it enlarges */
-  overflow: hidden; 
+  overflow: hidden;
   cursor: pointer;
 }
 
@@ -162,11 +168,11 @@ body {
   transition: all 1s ease-in-out;
 }
 
-.img-container:hover .store-img{
+.img-container:hover .store-img {
   transform: scale(1.2);
 }
 
-.store-item-icon{
+.store-item-icon {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -188,7 +194,8 @@ body {
 /* services */
 .services {
   color: var(--mainWhite);
-  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/servicesBcg.jpeg')center/cover fixed no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/servicesBcg.jpeg") center/cover fixed no-repeat;
 }
 
 .service-title {
@@ -222,7 +229,7 @@ body {
 .cart {
   position: absolute;
   min-height: 10rem;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.5);
   top: 0;
   right: 0;
   transition: all 0.3s ease-in-out;
